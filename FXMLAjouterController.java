@@ -50,16 +50,13 @@ public class FXMLAjouterController implements Initializable {
 
     @FXML
     private DatePicker fxDate;
-
     @FXML
     private JFXTextField fxNomEtudiant;
 
     @FXML
     private JFXTextField fxPrenomEtudiant;
-
     @FXML
     private JFXTextField fxTELEtudiant;
-
     @FXML
     private JFXTextField fxEmailEtudiant;
     
@@ -214,7 +211,6 @@ public class FXMLAjouterController implements Initializable {
         System.out.println("is new data");
         return true;
     }
-@FXML
     public void SelectImage (){
         
     }   

@@ -335,7 +335,7 @@ public class FXMLEtudiantsController implements Initializable {
      
      public void ModifierEtudiant() throws IOException {
 
-//essayer maintenant
+
 
     selectCondidat();
    

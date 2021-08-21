@@ -108,8 +108,6 @@ public class FXMLModifierController implements Initializable {
         
         //pour récupérer les informations qui existe déja dans la bdd
         
-
-
         if(CurrentObjetStatic==null || CurrentObjetStatic.getIdEtudiant().equals("")){
             
                Alert alert = new Alert(Alert.AlertType.ERROR);

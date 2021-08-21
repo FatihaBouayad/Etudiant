@@ -70,6 +70,7 @@ public class FXMLConfermationSuppressionController implements Initializable {
     @FXML
     private void SupprimerCondidat() {
         try {
+            
             String sql = "DELETE  FROM `etudiant`  WHERE IdEtud ='" + CurrentFournisseurStatic.getIdEtudiant()+ "'";
             
            pst = conn.prepareStatement(sql);
@@ -82,11 +83,27 @@ public class FXMLConfermationSuppressionController implements Initializable {
 
         }
     }
+@FXML
+void SupprimerInscription (){
+    String sqlS=null;
+    String v=null;
+    try {
+       
+            String s="Delete from inscription where IDInscription ="+CurrentFournisseurStatic.getIdEtudiant()+"'";
+             pst = conn.prepareStatement(s);
+            pst.executeUpdate();
+            pst.close();
+            rs.close();
+             } catch (SQLException ex) {
+            ex.printStackTrace();
 
+        }
+    SupprimerCondidat();
+}
     @FXML
     void Valider() {
         //on peut eviter cette methode pour eviter la duplication
-        SupprimerCondidat();
+        SupprimerInscription();
         Stage stage = (Stage) btnClose.getScene().getWindow();
         stage.close();
     }
